@@ -16,6 +16,7 @@ while ($row = $result->fetch_assoc())
 <link rel="stylesheet" href="assets/fonts/flat-icon/flaticon.css">
 <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="test/style.css">
 <script src="js/sweetalert.js"></script>
 <script type="text/javascript">
 function googleTranslateElementInit() {
