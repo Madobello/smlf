@@ -1,0 +1,14 @@
+<?php
+if($_SESSION['customerid'])
+{
+$customerid=$_SESSION['customerid'];
+$customerfirstname=$_SESSION['firstname'];
+$customerlastname=$_SESSION['lastname'];
+$customeremail=$_SESSION['email'];
+$customerphone=$_SESSION['phone'];
+}
+else
+{
+header("location:./phpincludes/logout.php");
+}
+?>
