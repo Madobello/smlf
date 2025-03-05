@@ -14,6 +14,8 @@
 <th class="text-left">Phone</th>
 <th class="text-left">Service Description</th>
 <th class="text-left">Date Registered</th>
+<th class="text-left">Status</th>
+<th class="text-left">Action</th>
 </tr>
 </thead>
 <tbody>
@@ -48,6 +50,18 @@ while ($rowservice = $resultmessage->fetch_assoc())
 <td class="text-left"><?php echo $rowservice["phone"]; ?></td>
 <td class="text-left"><?php echo $rowservice["servicedescription"]; ?></td>
 <td class="text-left"><?php echo $rowservice["dat"]; ?></td>
+
+<?php if ($rowservice["appointment"] == ""): ?>
+    <td class="text-left"><a href="./messagemodify.php?serviceid=<?php echo $rowservice['id']; ?>" class="btn btn-danger">Queued</a></td>
+<?php else: ?>
+    <td class="text-left text-success bold"><?php echo $rowservice["appointment"]; ?></td>
+<?php endif ?> 
+
+<?php if ($rowservice["appointment"] == ""): ?>
+    <td class="text-left"><a href="./messagemodify.php?deleteid=<?php echo $rowservice['id']; ?>" class="btn btn-danger">Delete</a></td>
+<?php else: ?>
+    <td class="text-left muted">N/A<?php # echo $rowservice["appointment"]; ?></td>
+<?php endif ?> 
 </tr>
 <?php
 }
