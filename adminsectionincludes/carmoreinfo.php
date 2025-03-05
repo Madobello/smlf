@@ -26,7 +26,7 @@ while ($rowgarage = $resultgarage->fetch_assoc()) {
             <input type="hidden" name="exname" value="<?php echo $rowgarage["name"]; ?>" >
             <div class="form-group">
                 <label for="name">Garage Name:</label>
-                <input type="text" id="name" name="garagename" class="form-control" placeholder="Enter garage name." value="<?php echo ucfirst($rowgarage["name"]); ?>" title="Enter garage name." required>
+                <input type="text" id="name" name="garagename" class="form-control" placeholder="Enter garage name." value="<?php echo ucfirst($rowgarage["name"]); ?>" title="Enter garage name." readonly>
             </div>
         </div>
         <div class="col-md-3 mb-3">
@@ -46,7 +46,7 @@ while ($rowgarage = $resultgarage->fetch_assoc()) {
                     <option value="Dodge">Dodge</option>
                     <option value="Ford">Ford</option>
                     <option value="Honda">Honda</option>
-                    <option value="Hundai">Hyundai</option>
+                    <option value="Hyundai">Hyundai</option>
                     <option value="Jeep">Jeep</option>
                     <option value="Kia">Kia</option>
                     <option value="Mazda">Mazda</option>
