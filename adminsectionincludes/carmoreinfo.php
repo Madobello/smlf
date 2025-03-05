@@ -83,7 +83,7 @@ while ($rowgarage = $resultgarage->fetch_assoc()) {
         </div>
         <div class="col-md-1 mb-3">
             <div class="form-group">
-                <label for="cartype">-</label>
+                <label for="cartype">Submit</label>
                 <input type="submit" name="addcar" class="btn btn-primary" value="Save">
             </div>
         </div>
@@ -110,6 +110,57 @@ if(isset($_POST['addcar'])) {
 <?php
 }
 ?>
+
+    <label for="table-head"><h2>Car Sample Added</h2></label>
+    <div class="table-responsive">
+        <table class="table table-hover">
+        <thead>
+            <tr>
+            <th class="text-left">Car Name</th>
+            <th class="text-left">Brand</th>
+            <th class="text-left">Ignition Type</th>
+            <th class="text-left">Type</th>
+            <th class="text-left">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+            $sql_car = "SELECT * FROM `car` WHERE `garagename` = '$garageid' ORDER BY carid ASC";
+            $result_car = $conn->query($sql_car);
+            if ($result_car->num_rows > 0) {
+                while ($rowcar = $result_car->fetch_assoc()) {
+        ?>
+        <tr>
+            <td class="text-left"><?php echo $rowcar["carname"]; ?></td>
+            <td class="text-left"><?php echo $rowcar["cartype"]; ?></td>
+            <td class="text-left"><?php echo $rowcar["carmodel"]; ?></td>
+            <td class="text-left"><?php echo $rowcar["Type"]; ?></td>
+            <td class="text-left"><a href="./adminsectionincludes/delete_car.php?garageid=<?php echo $garageid; ?>&carid=<?php echo $rowcar["carid"]; ?>" class="btn btn-danger">Delete</a></td>
+        </tr>
+        <?php
+            }
+        } else {
+        ?>
+        <tr>
+            <td colspan="6" class="text-center">
+                <script>
+                    swal({
+                        title: "No result found.",
+                        text: "Press Ok to close.",
+                        icon: 'info',
+                        closeOnClickOutside: false,
+                        closeOnEsc: false,
+                        allowOutsideClick: false,
+                    });
+                </script>
+            </td>
+        </tr>
+        <?php
+            }
+        ?>
+        </tbody>
+    </table>
+</div>
 </div>
 </div>
 </section>
