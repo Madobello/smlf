@@ -30,7 +30,6 @@ else
 <ul class="nav navbar-nav">
 <li><a href="#"><div id="google_translate_element"></div></a></li>
 <li><a href="index.php">HOME</a></li>
-<li><a href="index.php#request-form">REQUEST</a></li>
 <li><a href="index.php#about">ABOUT</a></li>
 <li><a href="tutorialpage.php">TUTORIAL</a></li> 
 

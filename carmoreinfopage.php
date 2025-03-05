@@ -19,12 +19,10 @@ include 'sectionincludes/navlink.php';
 include 'adminsectionincludes/adminnavbar.php';
 ?> 
 <?php
-include 'adminsectionincludes/selectgarage.php';
-?>
-<?php
-include 'sectionincludes/footersection.php';
+include 'adminsectionincludes/carmoreinfo.php';
 ?>
 </div>
+
 <?php
 include 'sectionincludes/footerjslink.php';
 ?>

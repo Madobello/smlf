@@ -17,67 +17,120 @@
 
 <hr>
 
+<!-- Search Handler -->
 <div class="row">
-<?php
-if (isset($_POST['search'])) {
-$searchvalue = $_POST['searchvalue'];
-$sqlgarage = "SELECT * FROM garage WHERE province LIKE '%$searchvalue%' OR district LIKE '%$searchvalue%' OR sector LIKE '%$searchvalue%' OR village LIKE '%$searchvalue%' OR name LIKE '%$searchvalue%' OR phone LIKE '%$searchvalue%' OR email LIKE '%$searchvalue%' ORDER BY id ASC";
-} else {
-$sqlgarage = "SELECT * FROM garage ORDER BY id ASC";
-}
-$resultgarage = $conn->query($sqlgarage);
-if ($resultgarage->num_rows > 0) {
-while ($rowgarage = $resultgarage->fetch_assoc()) {
-?>
-<div class="col-md-4 mb-4">
-<div class="card">
-<div class="card-img-container">
-<img class="card-img-top" src="garageinfouploads/<?php echo $rowgarage['profileimg']; ?>" >
+    <?php
+        if (isset($_POST['search'])) {
+            $searchvalue = $_POST['searchvalue'];
+            $sqlgarage = "SELECT * FROM garage RIGHT JOIN car ON garage.name = car.garagename WHERE province LIKE '%$searchvalue%' OR district LIKE '%$searchvalue%' OR sector LIKE '%$searchvalue%' OR village LIKE '%$searchvalue%' OR name LIKE '%$searchvalue%' OR phone LIKE '%$searchvalue%' OR email LIKE '%$searchvalue%' OR carname LIKE '%$searchvalue%' OR cartype LIKE '%$searchvalue%' OR carmodel LIKE '%$searchvalue%' ORDER BY id ASC";
+        // }
+        $resultgarage = $conn->query($sqlgarage);
+        if ($resultgarage->num_rows > 0) {
+        while ($rowgarage = $resultgarage->fetch_assoc()) {
+    ?>
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-img-container">
+                <img class="card-img-top" src="garageinfouploads/<?php echo $rowgarage['profileimg']; ?>" >
+            </div>
+            <div class="card-body">
+                <h4 class="card-title capitalize"><b><?php echo $rowgarage["name"]; ?></b></h4>
+                <p class="card-text">
+                    Province: <?php echo ucfirst($rowgarage["province"]); ?><br>
+                    District: <?php echo ucfirst($rowgarage["district"]); ?><br>
+                    Sector: <?php echo ucfirst($rowgarage["sector"]); ?><br>
+                    Village: <?php echo ucfirst($rowgarage["village"]); ?><br>
+                    Phone: <?php echo ucfirst($rowgarage["phone"]); ?><br>
+                    Email: <?php echo ucfirst($rowgarage["email"]); ?><br>
+                    Sample: <?php echo ucfirst($rowgarage["carname"]). ' | '. ucfirst($rowgarage["cartype"]). ' | '. ucfirst($rowgarage["carmodel"]);; ?><br>
+                </p>
+                <?php
+                    if (isset($_SESSION['customerid'])) {
+                ?>
+                <a href="./moreaboutgaragepage.php?garageid=<?php echo $rowgarage['id']; ?>" class="btn btn-primary">View More Info</a>
+                <?php
+                    } else {
+                ?>
+                <a href="#" data-toggle="modal" data-target="#loginmodal" class="btn btn-primary">Login for More Info</a>
+                <?php
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
+    <?php
+        }
+    } else {
+    ?>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        Swal.fire({
+        title: 'No Result Found',
+        text: 'Press OK to close.',
+        icon: 'info',
+        confirmButtonText: 'OK',
+        allowOutsideClick: false,
+        closeOnClickOutside: false,
+        closeOnEsc: false
+        });
+    </script>
+    <?php
+    }}
+        else {
+            $sqlgarage = "SELECT * FROM garage RIGHT JOIN car ON garage.name = car.garagename ORDER BY id ASC LIMIT 6";
+        // }
+        $resultgarage = $conn->query($sqlgarage);
+        if ($resultgarage->num_rows > 0) {
+        while ($rowgarage = $resultgarage->fetch_assoc()) {
+    ?>
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-img-container">
+                <img class="card-img-top" src="garageinfouploads/<?php echo $rowgarage['profileimg']; ?>" >
+            </div>
+            <div class="card-body">
+                <h4 class="card-title capitalize"><b><?php echo $rowgarage["name"]; ?></b></h4>
+                <p class="card-text">
+                    <?php echo ucfirst($rowgarage["province"]). " | " .  $rowgarage["district"] . " | " . $rowgarage["sector"]; ?><br>
+                    Phone: <?php echo ucfirst($rowgarage["phone"]); ?><br>
+                    Email: <?php echo ucfirst($rowgarage["email"]); ?><br>
+                </p>
+                <?php
+                    if (isset($_SESSION['customerid'])) {
+                ?>
+                <a href="./moreaboutgaragepage.php?garageid=<?php echo $rowgarage['id']; ?>" class="btn btn-primary">View More Info</a>
+                <?php
+                    } else {
+                ?>
+                <a href="#" data-toggle="modal" data-target="#loginmodal" class="btn btn-primary">Login for More Info</a>
+                <?php
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
+    <?php
+        }
+    } else {
+    ?>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        Swal.fire({
+        title: 'No Result Found',
+        text: 'Press OK to close.',
+        icon: 'info',
+        confirmButtonText: 'OK',
+        allowOutsideClick: false,
+        closeOnClickOutside: false,
+        closeOnEsc: false
+        });
+    </script>
+    <?php
+    }}
+    ?>
 </div>
-<div class="card-body">
-<h4 class="card-title capitalize"><b><?php echo $rowgarage["name"]; ?></b></h4>
-<p class="card-text">
-Province: <?php echo $rowgarage["province"]; ?><br>
-District: <?php echo $rowgarage["district"]; ?><br>
-Sector: <?php echo $rowgarage["sector"]; ?><br>
-Village: <?php echo $rowgarage["village"]; ?><br>
-Phone: <?php echo $rowgarage["phone"]; ?><br>
-Email: <?php echo $rowgarage["email"]; ?>
-</p>
-<?php
-if (isset($_SESSION['customerid'])) {
-?>
-<a href="./moreaboutgaragepage.php?garageid=<?php echo $rowgarage['id']; ?>" class="btn btn-primary">View More Info</a>
-<?php
-} else {
-?>
-<a href="#" data-toggle="modal" data-target="#loginmodal" class="btn btn-primary">Login for More Info</a>
-<?php
-}
-?>
-</div>
-</div>
-</div>
-<?php
-}
-} else {
-?>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
-Swal.fire({
-title: 'No Result Found',
-text: 'Press OK to close.',
-icon: 'info',
-confirmButtonText: 'OK',
-allowOutsideClick: false,
-closeOnClickOutside: false,
-closeOnEsc: false
-});
-</script>
-<?php
-}
-?>
-</div>
+
+
 </div>
 </div>
 </section>

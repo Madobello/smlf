@@ -7,43 +7,47 @@ include 'phpincludes/deletegarage.php';
 ?>
 <div class="container">
 <div class="page-section">
-<h2 class="page-section__title">Update Garage</h2>
+<h2 class="page-section__title">Be Seen | Add Sample Car types, Mode</h2>
 <?php
 include 'adminsectionincludes/systemtitle.php';
 ?>
 
 <?php
 $garageid = $_GET['garageid'];
-$sqlgarage = "SELECT * FROM garage WHERE id='$garageid'";
+$sqlgarage = "SELECT * FROM garage WHERE name='$garageid'";
 $resultgarage = $conn->query($sqlgarage);
 while ($rowgarage = $resultgarage->fetch_assoc()) {
 ?>
 
 <form method="POST" enctype="multipart/form-data">
 <div class="row">
-<div class="col-md-6 mb-3">
-<input type="hidden" name="updategarageid" value="<?php echo $rowgarage["id"]; ?>" required>
-<input type="hidden" name="exname" value="<?php echo $rowgarage["name"]; ?>" >
-<div class="form-group">
-<label for="name">Name:</label>
-<input type="text" id="name" name="name" class="form-control" placeholder="Enter garage name." value="<?php echo $rowgarage["name"]; ?>" title="Enter garage name." required>
-</div>
+    <div class="col-md-6 mb-3">
+        <input type="hidden" name="updategarageid" value="<?php echo $rowgarage["id"]; ?>" required>
+        <input type="hidden" name="exname" value="<?php echo $rowgarage["name"]; ?>" >
+        <div class="form-group">
+            <label for="name">Garage Name:</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Enter garage name." value="<?php echo ucfirst($rowgarage["name"]); ?>" title="Enter garage name." required>
+        </div>
 
-<div class="row">
-<div class="col-md-6 mb-3">
-<div class="form-group">
-<label for="phone">Phone:</label>
-<input type="text" pattern="^\+(\d{1,4})\s?\(?\d+\)?[\s\-]?\d+[\s\-]?\d+[\s\-]?\d+$" 
-                   title="Phone number (e.g., +1 555-555-5555)" id="phone" name="phone" class="form-control" value="<?php echo $rowgarage["phone"]; ?>" title="Enter garage phone." required>
-</div>
-</div>
-<div class="col-md-6 mb-3">
-<div class="form-group">
-<label for="email">Email:</label>
-<input type="email" id="email" name="email" class="form-control" value="<?php echo $rowgarage["email"]; ?>" placeholder="Enter garage email." title="Enter garage email." >
-</div>
-</div>
-</div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+            <div class="form-group">
+                <label for="carname">Car name:</label>
+                <input type="text" id="carname" name="carname" class="form-control" placeholder="Enter Sample Car e.g Prius" title="Enter sample car name" required><br>
+
+                <select name="car type" id="" class="form-control">
+                    <option value=""></option>
+                </select>
+                <input type="text" id="cartype" name="cartype" class="form-control" placeholder="Enter Sample Car e.g Prius" title="Enter sample car type" required><br>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" value="<?php echo $rowgarage["email"]; ?>" placeholder="Enter garage email." title="Enter garage email." >
+            </div>
+        </div>
+    </div>
 
 <div class="form-group">
 <label for="profileimg">Profile Image:</label>

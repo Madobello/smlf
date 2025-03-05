@@ -26,4 +26,4 @@ while ($row = $result->fetch_assoc())
   z-index: -1;
   </style>
 
-
+}

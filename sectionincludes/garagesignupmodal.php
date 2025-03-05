@@ -60,7 +60,6 @@ include 'phpincludes/insertgarage.php';
 </select>
 </div>
 
-
 <div class="form-group">
 <label for="password1">Enter your password:</label>
 <input type="password" id="password1" name="password1" class="form-control" placeholder="Enter new password" required>
