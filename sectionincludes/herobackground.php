@@ -9,8 +9,8 @@ while ($row = $result->fetch_assoc()) {
 <?php } ?>
   background-size: cover;
   position: relative;
-  z-index: -1;
-  opacity: .5;
+  /* z-index: -1; */
+  opacity: .8;
 }
 .header--bg:after{
   content: '';
