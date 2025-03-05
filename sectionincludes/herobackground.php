@@ -1,5 +1,5 @@
 <style type="text/css">
-.header--bg{
+.header--bg {
 <?php
 $sql = "SELECT * FROM systeminfo   ORDER BY id ASC LIMIT 1";
 $result = $conn->query($sql);
@@ -25,5 +25,4 @@ while ($row = $result->fetch_assoc())
 
   z-index: -1;
   </style>
-
 }

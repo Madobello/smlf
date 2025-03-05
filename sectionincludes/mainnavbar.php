@@ -9,12 +9,10 @@
 </div>
 <div class="collapse navbar-collapse " id="myNavbar">
 <?php
-$sql = "SELECT * FROM systeminfo ORDER BY id ASC LIMIT 1";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) 
-{
-while ($row = $result->fetch_assoc()) 
-{
+    $sql = "SELECT * FROM systeminfo ORDER BY id ASC LIMIT 1";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
 ?>
 <a  href="index.php"><img class="img-rounded" src="systeminfouploads/<?php echo $row['logo']; ?>" alt="Current Logo" style="max-width: 100px;"></a>
 <?php

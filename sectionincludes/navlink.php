@@ -2,15 +2,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <?php
-$sql = "SELECT * FROM systeminfo ORDER BY id ASC LIMIT 1";
-$result = $conn->query($sql);
-while ($row = $result->fetch_assoc()) 
-{
+    $sql = "SELECT * FROM systeminfo ORDER BY id ASC LIMIT 1";
+    $result = $conn->query($sql);
+    while ($row = $result->fetch_assoc()) {
 ?>
+
 <title><?php echo $row["name"];?></title>
-<?php
-}
-?>
+<?php } ?>
+
 <meta name="keywords" content="">
 <meta name="description" content="">
 <link rel="stylesheet" href="assets/fonts/flat-icon/flaticon.css">
