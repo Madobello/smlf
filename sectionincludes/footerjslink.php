@@ -1,3 +1,4 @@
+<script src="test/script.js"></script>
 <script src="assets/jquery/jquery-3.2.1.min.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
   <script src="js/mixitup.js"></script>

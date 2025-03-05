@@ -24,6 +24,9 @@ include 'sectionincludes/herosection.php';
 include 'sectionincludes/tutorial.php';
 ?>
 <?php
+// include 'sectionincludes/requestpage.php';
+?>
+<?php
 include 'sectionincludes/aboutussection.php';
 ?>
 <?php
