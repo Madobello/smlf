@@ -92,6 +92,13 @@
                                     <label for="servicedesc">Service description</label>
                                     <textarea id="servicedesc" name="servicedesc" class="form-control" required rows="5"></textarea>
                                 </div>
+                                <div class="form-group">
+    <label for="date">Booking Date</label>
+    <input type="date" class="form-control" id="date" name="date">
+</div>
+
+
+
                                 <button type="submit" name="send" class="btn btn-primary">Send</button>
                             </form>
                             <?php
