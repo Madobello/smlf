@@ -3,17 +3,14 @@
 <?php
 $sql = "SELECT * FROM systeminfo   ORDER BY id ASC LIMIT 1";
 $result = $conn->query($sql);
-while ($row = $result->fetch_assoc()) 
-{
+while ($row = $result->fetch_assoc()) {
 ?>
   background: url("systeminfouploads/<?php echo $row['logo']; ?>") no-repeat;
-<?php
-}
-?>
+<?php } ?>
   background-size: cover;
   position: relative;
-  z-index: 1;
-
+  z-index: -1;
+  opacity: .5;
 }
 .header--bg:after{
   content: '';
@@ -22,7 +19,5 @@ while ($row = $result->fetch_assoc())
   right: 0;
   top: 0;
   bottom: 0;
-
-  z-index: -1;
-  </style>
 }
+</style>
