@@ -45,6 +45,7 @@ while ($rowgarage = $resultgarage->fetch_assoc()) {
                     <option value="Chevrolet">Chevrolet</option>
                     <option value="Dodge">Dodge</option>
                     <option value="Ford">Ford</option>
+                    <option value="Ford F-150">Ford F-150</option>
                     <option value="Honda">Honda</option>
                     <option value="Hyundai">Hyundai</option>
                     <option value="Jeep">Jeep</option>
@@ -56,9 +57,19 @@ while ($rowgarage = $resultgarage->fetch_assoc()) {
                     <option value="Porsche">Porsche</option>
                     <option value="Suzuki">Suzuki</option>
                     <option value="Toyota">Toyota</option>
+                    <option value="Toyota Hilux">Toyota Hilux</option>
                     <option value="Tesla">Tesla</option>
-                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Lamborghini">Lamborghini</option>
+                    <option value="Rolls-Royce">Rolls-Royce</option>
+                    <option value="Bugatti">Bugatti</option>
+                    <option value="Peugeot">Peugeot</option>
+                    <option value="Subaru">Subaru</option>
+                    <option value="Chrysler">Chrysler</option>
+                    <option value="Renault">Renault</option>
                     <option value="Volvo">Volvo</option>
+                    <option value="Ferrari">Ferrari</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    
                 </select>
             </div>
         </div>
@@ -69,9 +80,31 @@ while ($rowgarage = $resultgarage->fetch_assoc()) {
                     <option value="Hybrid">Hybrid</option>
                     <option value="EV">EV</option>
                     <option value="Fuel">Fuel</option>
+                    <option value="diesel">Diesel</option>
                 </select>
             </div>
         </div>
+  
+        <div class="col-md-2 mb-3">
+    <div class="form-group">
+        <label for="country">Country</label>
+        <select name="country" class="form-control">
+            <option value="China">China</option>
+            <option value="England">England</option>
+            <option value="Japan">Japan</option>
+            <option value="USA">USA</option>
+            <option value="Germany">Germany</option>
+            <option value="France">France</option>
+            <option value="Italy">Italy</option>
+            <option value="UK">UK</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Brasil">Brazil</option>
+            <option value="South Africa">South Africa</option>
+        </select>
+    </div>
+</div>
+
+
         <div class="col-md-2 mb-3">
             <div class="form-group">
                 <label for="type">Manual or Auto:</label>
@@ -96,17 +129,24 @@ if(isset($_POST['addcar'])) {
     $cartype = $_POST['cartype'];
     $garagename = $_POST['garagename'];
     $carbrand = $_POST['carbrand'];
+    $country = $_POST['country'];
     $type = $_POST['type'];
     $adminid = '5';
 
-    $sql_insert = $conn -> query ("INSERT INTO `car`(`carname`, `cartype`, `carmodel`, `country`, `type`, `adminid`, `garagename`) VALUES ('$carname','$cartype','$carbrand','N/A','$type','$adminid','$garagename')");
+    $sql_insert = $conn -> query ("INSERT INTO `car`(`carname`, `cartype`, `carmodel`, `country`, `type`, `adminid`, `garagename`) VALUES ('$carname','$cartype','$carbrand','$country','$type','$adminid','$garagename')");
 
     if ($sql_insert) {
         echo "<script>alert('Successfull Added')</script>";
     }
 }
 ?>
+<?php
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $country = isset($_POST['country']) ? $_POST['country'] : 'Not Selected';
+}
+
+?>
 <?php
 }
 ?>
@@ -118,7 +158,8 @@ if(isset($_POST['addcar'])) {
             <tr>
             <th class="text-left">Car Name</th>
             <th class="text-left">Brand</th>
-            <th class="text-left">Ignition Type</th>
+            <th class="text-left">Ignition Type</th> 
+            <th class="text-left">Country</th>
             <th class="text-left">Type</th>
             <th class="text-left">Action</th>
             </tr>
@@ -134,6 +175,7 @@ if(isset($_POST['addcar'])) {
             <td class="text-left"><?php echo $rowcar["carname"]; ?></td>
             <td class="text-left"><?php echo $rowcar["cartype"]; ?></td>
             <td class="text-left"><?php echo $rowcar["carmodel"]; ?></td>
+            <td class="text-left"><?php echo $rowcar["country"]; ?></td>
             <td class="text-left"><?php echo $rowcar["Type"]; ?></td>
             <td class="text-left"><a href="./adminsectionincludes/delete_car.php?garageid=<?php echo $garageid; ?>&carid=<?php echo $rowcar["carid"]; ?>" class="btn btn-danger">Delete</a></td>
         </tr>

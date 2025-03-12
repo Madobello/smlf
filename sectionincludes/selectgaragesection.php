@@ -22,7 +22,7 @@
     <?php
         if (isset($_POST['search'])) {
             $searchvalue = $_POST['searchvalue'];
-            $sqlgarage = "SELECT * FROM garage RIGHT JOIN car ON garage.name = car.garagename WHERE province LIKE '%$searchvalue%' OR district LIKE '%$searchvalue%' OR sector LIKE '%$searchvalue%' OR village LIKE '%$searchvalue%' OR name LIKE '%$searchvalue%' OR phone LIKE '%$searchvalue%' OR email LIKE '%$searchvalue%' OR carname LIKE '%$searchvalue%' OR cartype LIKE '%$searchvalue%' OR carmodel LIKE '%$searchvalue%' ORDER BY id ASC";
+            $sqlgarage = "SELECT * FROM garage LEFT JOIN car ON garage.name = car.garagename WHERE province LIKE '%$searchvalue%' OR district LIKE '%$searchvalue%' OR sector LIKE '%$searchvalue%' OR village LIKE '%$searchvalue%' OR name LIKE '%$searchvalue%' OR phone LIKE '%$searchvalue%' OR email LIKE '%$searchvalue%' OR carname LIKE '%$searchvalue%' OR cartype LIKE '%$searchvalue%' OR carmodel LIKE '%$searchvalue%' OR aboutus LIKE '%$searchvalue%' ORDER BY id ASC";
         // }
         $resultgarage = $conn->query($sqlgarage);
         if ($resultgarage->num_rows > 0) {
@@ -77,7 +77,7 @@
     <?php
     }}
         else {
-            $sqlgarage = "SELECT * FROM garage RIGHT JOIN car ON garage.name = car.garagename ORDER BY id ASC LIMIT 6";
+            $sqlgarage = "SELECT * FROM garage LEFT JOIN car ON garage.name = car.garagename ORDER BY id ASC ";
         // }
         $resultgarage = $conn->query($sqlgarage);
         if ($resultgarage->num_rows > 0) {

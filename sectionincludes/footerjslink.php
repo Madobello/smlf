@@ -13,7 +13,7 @@
         kigali: {
             districts: {
                 Gasabo: ['Jabana', 'Jari', 'Gatsata', 'Bumbogo', 'Kacyiru','Kimihurura','Kinyinya','Ndera','Nduba','Remera','Rusororo','Rutunga'],
-                Kicukiro: ['Gahanga', 'Gikondo', 'Kagarama', 'Kanombe', 'Kinyinya', 'Masaka', 'Niboye', 'Nyarugunga', 'Rebero'],
+                Kicukiro: ['Gahanga', 'Gikondo', 'Kagarama', 'Kanombe', 'Kinyinya', 'Masaka', 'Niboye', 'Nyarugunga', 'Gatenga', 'Kicukiro'],
                 Nyarugenge: ['Biryogo', 'Gitega', 'Muhima', 'Nyakabanda', 'Nyamirambo', 'Nyarugenge', 'Rwezamenyo']
 
                 
@@ -32,7 +32,18 @@
                 Rusororo: ['Gatovu', 'Gihira', 'Kabuga', 'Karuruma', 'Kimihurura','Gatovu', 'Gihira', 'Kabuga', 'Karuruma', 'Kimihurura','Gatovu', 'Gihira', 'Kabuga', 'Karuruma', 'Kimihurura','Gatovu', 'Gihira', 'Kabuga', 'Karuruma', 'Kimihurura'],
                 Rutunga: ['Gatovu', 'Gihira', 'Kabuga', 'Karuruma', 'Kimihurura','Gatovu', 'Gihira', 'Kabuga', 'Karuruma', 'Kimihurura','Gatovu', 'Gihira', 'Kabuga', 'Karuruma', 'Kimihurura','Gatovu', 'Gihira', 'Kabuga', 'Karuruma', 'Kimihurura'],
                Gahanga: ['gahanga','gatare', 'gatovu', 'karembure', 'kabeza', 'kamiyinga', 'rwamaya','bigo','amahoro','kagasa rugando2', 'nyakuguma', 'kagasa nyacyonga','ubumwe'],
-               // Add sectors for other districts
+               Nyarugunga:['Akindege', 'Runyonza', 'Rwimbogo'],
+                Niboye:['Byimana','Gatare','Imena','Kamahoro','Kigarama','Rugunga','Rurembo','Taba','Buhoro','Gaseke','Gateke','Gorora','Kigabiro','Kinunga','Kiruhura','Munini','Murehe','Mwijabo','Mwijuto','Nyarubande','Rwezamenyo','Sovu','Taba','Amahoro','Amarebe','Amarembo','Bigabiro','Bukinanyana','Bumanzi','Bwiza','Gatsibo','Gikundiro','Indakemwa','Indamutsa','Indatwa','Inyarurembo','Isangano','Karama','Kinyana','Rugwiro','Umurava'],
+                Masaka:['Ayabaraya','Bwiza','Rebero','Gitaraga','Mbabe','Cyankongi'],
+                Kigarama: ['Bwerankori','Terimbere','Kigarama','Twishorezo','Rwampara'],
+                Kicukiro:['Sakirwa','Kagina','Kicukiro','Iriba'],
+                Kanombe:['Busanza','Giporoso II','Nyabyunyu','Rubirizi'],
+                Kagarama:['Kanserege','Taba','Rukatsa'],
+                Gikondo: ['Kabuye I','Kanserege','Ruganwa II'],
+                Gahanga: ['Gahanga','Kagasa','Karembure','Murinja','Nunga','Rwabutenge','Nyakuguma','Karembure','Runyoni','Nunga','Rwabutenge'],
+Gatenga:['Gatenga','Karambo','Gasabo','Nyarurama'],
+
+                // Add sectors for other districts
             }
         },
 
