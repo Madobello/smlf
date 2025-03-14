@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/fonts/flat-icon/flaticon.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="test/style.css">
+    <script src="js/sweetalert.js"></script>
+
     <title>Appointment & Booking List</title>
     <style>
-        body {
+        *{
+            margin: 0 auto;
             font-family: Arial, sans-serif;
-            margin: 20px;
         }
         form, .booking-list {
             max-width: 400px;
@@ -16,7 +23,7 @@
             border: 1px solid #ddd;
             border-radius: 5px;
         }
-        label, input, button {
+        label{
             display: block;
             width: 100%;
             margin-bottom: 10px;
@@ -42,23 +49,23 @@
     </style>
 </head>
 <body>
-    <h2>Appointment Form</h2>
+    <h2 style="text-align: center; margin:40px 0">Appointment Form <a href="logout.php" style="" class="btn btn-danger">Logout</a></h2>
     <form id="appointmentForm">
         <label for="name">Car Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" class="form-control" id="name" name="name" required><br>
     
         <label for="date">Date:</label>
-        <input type="date" id="date" name="date" required>
+        <input type="date" class="form-control" id="date" name="date" required><br>
         
         <label for="time">Time:</label>
-        <input type="time" id="time" name="time" required>
+        <input type="time" class="form-control" id="time" name="time" required><br>
         
         <a href="moreaboutgaragepage.php" ><button type="submit">Book Appointment</button></a>
     </form>
     
-    <h2>Booking List</h2>
+    <h2 style="text-align: center">Booking List</h2>
     <div class="booking-list" id="bookingList">
-        <p id="noBookingsMessage">No bookings yet.</p>
+        <p id="noBookingsMessage">No bookings yet.</p><br>
     </div>
 
     <script>
