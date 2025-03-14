@@ -23,7 +23,7 @@ icon: 'success',
 closeOnClickOutside: false
 }).then(function (isConfirm) {
 if (isConfirm) {
-window.location = 'dashboard.php'; // Redirect to dashboard
+window.location = 'userinfo.php'; // Redirect to dashboard
 }
 });
 </script>";

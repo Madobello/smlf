@@ -1,4 +1,4 @@
-<?php
+<?php 
 include 'phpincludes/startsession.php';
 ?>
 <html lang="en">
@@ -11,7 +11,7 @@ include 'sectionincludes/navlink.php';
 <body>
 <div id="content-wrapper">
 <?php
-include 'sectionincludes/mainnavbar.php';
+include  'sectionincludes/mainnavbar.php';
 ?>
 <?php
 include 'sectionincludes/viewmoreservice.php';

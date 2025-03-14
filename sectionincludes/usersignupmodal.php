@@ -24,7 +24,7 @@
 <div class="form-group">
 <label for="phone">Enter your phone number:</label>
 <input type="text" id="phone" name="phone" class="form-control" pattern="^\+(\d{1,4})\s?\(?\d+\)?[\s\-]?\d+[\s\-]?\d+[\s\-]?\d+$" 
-                   title="Phone number (e.g., +1 555-555-5555)" value="+250" required>
+                   title="Phone number (e.g., +250)" value="+250" required>
 </div>
 <div class="form-group">
 <label for="password1">Enter your password:</label>

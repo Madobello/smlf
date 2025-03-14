@@ -73,14 +73,14 @@ while ($rowservice = $resultmessage->fetch_assoc())
 <tr>
 <td colspan="6" class="text-center">
 <script>
-swal({
-title: "No result found.",
-text: "Press Ok to close.",
-icon: 'info',
-closeOnClickOutside: false,
-closeOnEsc: false,
-allowOutsideClick: false,
-});
+//swal({
+//title: "No result found.",
+//text: "Press Ok to close.",
+//icon: 'info',
+//closeOnClickOutside: false,
+//closeOnEsc: false,
+//allowOutsideClick: false,
+//});
 </script>
 </td>
 </tr>

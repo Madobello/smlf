@@ -42,6 +42,8 @@
                 Gikondo: ['Kabuye I','Kanserege','Ruganwa II'],
                 Gahanga: ['Gahanga','Kagasa','Karembure','Murinja','Nunga','Rwabutenge','Nyakuguma','Karembure','Runyoni','Nunga','Rwabutenge'],
 Gatenga:['Gatenga','Karambo','Gasabo','Nyarurama'],
+Nyarugenge:['Gitega','Nyakabanda', 'Nyarugenge', 'kabuye', 'nyamirambo','Rwampara'],
+Muhima:['muhima','nyundo','kabuye', 'gisozi'],
 
                 // Add sectors for other districts
             }
@@ -63,7 +65,8 @@ Gatenga:['Gatenga','Karambo','Gasabo','Nyarurama'],
                 Bugarama: ['Kamembe', 'Nyakabuye'],
                 Butare: ['Bugarama', 'Rukono'],
                 Boneza: ['Kamembe', 'Bugarama'],
-                Gihango:['Boneza','Gitwe']
+                Gihango:['Boneza','Gitwe'],
+                Rugerero:['Kabarora']
                
                 // Add sectors for other districts
             }
@@ -73,7 +76,7 @@ Gatenga:['Gatenga','Karambo','Gasabo','Nyarurama'],
                 Musanze: ['Musanze', 'Muhoza','Kinigi', 'Nyange', 'Gacaca', 'Muko','Busogo','Nkotsi','cyuve','Shyingiro','Gataraga','Kimonyi','Gashyaka','Remera','Rwaza'],
                 Gakenke: ['Janja', 'Butare','mataba','Cyabingo','Rugaga','Kivuruga','Busengo','Mugunga','Muzo','Kamusuga','Karambo','Gakenke','Nemba','Mataba','Mianazi','Ruli','Munondo','Munyongwe'],
                 Rulindo: ['Shyorongi', 'Rusiga','Ngoma','Murambi','Masoro','Ntarabana','Burega','Cyinzuzi','Mbogo','Tumba','Buyoga','Cyinzozi','Bushoki','Kinihira','Kisaro','Rukozo','Cyungo','Base'],
-                Burera: ['Gitovu', 'Ruhengabari','Cyeru','Rwerere','Bungwe','Gatebe','Ruhunde','Nemba','Kivuye','Rusarabuye','Kinyabara','Kinoni','Kinoni','Butaro','Kinyababa','Kagogo','Cyanika','Ruagarama','Gahunga'],
+                Burera: ['Gitovu', 'Ruhengabari','Cyeru','Rwerere','Bungwe','Gatebe','Ruhunde','Nemba','Kivuye','Rusarabuye','Kinyabara','Kinoni','Butaro','Kinyababa','Kagogo','Cyanika','Ruagarama','Gahunga'],
                 Gicumbi: ['Kaniga','Rubaya','Cyumba','Mukarange','Rushaki','Muanyagiro','Shangasha','Bwisige','Byumba','Nyarikenke','Mivoye','Rukomo','Kageyo','Ruvune','Nyamiyaga','Rushaki','Rutare','Muko','Rwamiko','Giko','Bukure']
             },
             sectors: {
@@ -83,6 +86,7 @@ Gatenga:['Gatenga','Karambo','Gasabo','Nyarurama'],
                 Butare: ['Kabaya', 'Kabere'],
                 Buyoga: ['kabeza', 'Kabingo'],
                 Cyimbogo: ['Kabingo', 'Rwamiko'],
+                Gitovu:['gitovu']
             
                
                 // Add sectors for other districts
@@ -122,7 +126,7 @@ Gatenga:['Gatenga','Karambo','Gasabo','Nyarurama'],
                Rwaniro:['Rwaniro', 'Buhinga', 'Gihinga', 'Gitarama', 'Kinyami', 'Mubuga', 'Mukarange', 'Rugali'],
                Simbi:  ['Simbi', 'Bihinga', 'Gikore', 'Kibaya', 'Kigoma', 'Muganza', 'Mukura', 'Nyarusange'],
                Tumba: ['Tumba', 'Gihira', 'Gishamvu', 'Kibaya', 'Kibanda', 'Mubuga', 'Mukarange', 'Nyarusange', 'Rugali'],
-               
+               Kibangu: ['kibangu']
                 // Add sectors for other districts
             }
         },
@@ -148,8 +152,10 @@ Gatenga:['Gatenga','Karambo','Gasabo','Nyarurama'],
            sectors: {
              Gatunda: ['Gatunda','Kinazi','Kangazi','shisi'],
             Karama: ['karama',],
-            Gahini:[],
-
+            Gahini:['gahini'],
+            Kabarondo:['Kabarondo', 'nyakariro', 'kigina','nyarubuye','nyamugani','Rwimbogo','ruhinga','nyamugari','rubimba'],
+            Nasho:['nasho', 'kabuye','Nyamirama', 'Kigarama', 'nyarubuye','gahara', 'bigarura', 'rukomo','cyaruzinge'],
+            Mayange:['mayange']
            },
         }
     };

@@ -75,12 +75,13 @@ while ($rowgarage = $resultgarage->fetch_assoc()) {
         </div>
         <div class="col-md-2 mb-3">
             <div class="form-group">
-                <label for="cartype">Car Type:</label>
+                <label for="cartype">Fuel Type:</label>
                 <select name="cartype" id="" class="form-control">
                     <option value="Hybrid">Hybrid</option>
                     <option value="EV">EV</option>
                     <option value="Fuel">Fuel</option>
                     <option value="diesel">Diesel</option>
+                    
                 </select>
             </div>
         </div>
@@ -157,8 +158,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <thead>
             <tr>
             <th class="text-left">Car Name</th>
-            <th class="text-left">Brand</th>
-            <th class="text-left">Ignition Type</th> 
+            <th class="text-left">Fuel Type</th>
+            <th class="text-left">Brand</th> 
             <th class="text-left">Country</th>
             <th class="text-left">Type</th>
             <th class="text-left">Action</th>
@@ -186,14 +187,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <tr>
             <td colspan="6" class="text-center">
                 <script>
-                    swal({
-                        title: "No result found.",
-                        text: "Press Ok to close.",
-                        icon: 'info',
-                        closeOnClickOutside: false,
-                        closeOnEsc: false,
-                        allowOutsideClick: false,
-                    });
+                   // swal({
+                        //title: "No result found.",
+                        //text: "Press Ok to close.",
+                        //icon: 'info',
+                        //closeOnClickOutside: false,
+                        //closeOnEsc: false,
+                        //allowOutsideClick: false,
+                   // });
                 </script>
             </td>
         </tr>
