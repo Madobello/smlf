@@ -33,7 +33,7 @@
                             <h4 class="adminmain__single__title capitalize"><?php echo $rowgarage["name"];?></h4></a>
                             
                             <div class="row">
-                                <p><a href="carmoreinfopage.php?garageid=<?php echo $rowgarage['name']; ?>" class="btn btn-warning">Associate Car Services</a></p>
+                                <!-- <p><a href="carmoreinfopage.php?garageid=<?php echo $rowgarage['name']; ?>" class="btn btn-warning">Associate Car Services</a></p> -->
                                 
                                 <p class="adminmain__single__paragraph"><a href="garagemoreinfopage.php?garageid=<?php echo $rowgarage['id']; ?>" class="btn btn-primary">READ MORE...</a></p>
                             </div>

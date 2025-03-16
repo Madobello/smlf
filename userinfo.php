@@ -35,6 +35,10 @@ include 'sectionincludes/userappointsection.php';
 ?>
 
 <?php
+include 'adminsectionincludes/usermessageview.php';
+?>
+
+<?php
 include 'sectionincludes/footersection.php';
 ?>
 </div>
