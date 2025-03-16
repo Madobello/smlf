@@ -29,8 +29,8 @@ else
 <li><a href="#"><div id="google_translate_element"></div></a></li>
 <!-- <li><a href="index.php">HOME</a></li> -->
 <li><a href="userinfo.php">APPOINTMENT</a></li>
-<li><a href="index.php#about">ABOUT</a></li>
-<li><a href="tutorialpage.php">TUTORIAL</a></li> 
+<!-- <li><a href="index.php#about">ABOUT</a></li> -->
+<!-- <li><a href="tutorialpage.php">TUTORIAL</a></li>  -->
 
 <li cclass="dropdown">
 <?php
@@ -49,8 +49,7 @@ $phone=$_SESSION['phone'];
 else
 {
 ?>
-<a href="#"  class="nav-link dropdown-toggle"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-GARAGE<span class="caret"></span>
+<!-- <a href="#"  class="nav-link dropdown-toggle"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">GARAGE<span class="caret"></span> -->
 </a>
 <?php
 }

@@ -1,4 +1,4 @@
-<section id="portfolio" class="adminmain py-5">
+<section id="portfolio" class="adminmain py-3">
     <div class="container">
         <div class="page-section">
             <h2 class="page-section__title text-center">Appointment</h2>

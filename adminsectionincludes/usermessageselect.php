@@ -51,7 +51,7 @@
                 <?php endif ?> 
 
                 <?php if ($rowservice["appointment"] == ""): ?>
-                <td class="text-left"><a href="./messagemodify.php?deleteid=<?php echo $rowservice['id']; ?>" class="btn btn-danger">Delete</a></td>
+                <td class="text-left"><a href="./messagemodify.php?bookdeleteid=<?php echo $rowservice['id']; ?>" class="btn btn-danger">Delete</a></td>
                 <?php else: ?>
                 <td class="text-left muted">N/A<?php # echo $rowservice["appointment"]; ?></td>
                 <?php endif ?> 
