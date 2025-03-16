@@ -22,4 +22,15 @@ if ($_GET['deleteid']) {
         header("Location: messagepage.php");
     }
 }
+
+if ($_GET['bookdeleteid']) {
+    $service_id = $_GET['bookdeleteid'];
+
+    $delete_query = $conn -> query("DELETE FROM `message` WHERE `id` = '$service_id'");
+
+    if ($delete_query) {
+        echo "<script>alert('Service Approved Successully!')</script>";
+        header("Location: userinfo.php");
+    }
+}
 ?>

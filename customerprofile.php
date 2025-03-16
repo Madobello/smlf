@@ -11,7 +11,7 @@ include 'sectionincludes/navlink.php';
 <body>
 <div id="content-wrapper">
 <?php
-//include 'sectionincludes/mainnavbar.php';
+include 'sectionincludes/mainnavbar-user.php';
 ?>
 <div class="container">
 <br>
