@@ -1,6 +1,6 @@
-<section id="portfolio" class="adminmain py-5">
+<!-- <section id="portfolio" class="adminmain py-5">
     <div class="container">
-        <div class="page-section">
+        <div class="page-section"> -->
             <h2 class="page-section__title text-center">Booking List</h2>
             <?php include 'sectionincludes/systemtitle.php'; ?>
 
@@ -139,6 +139,6 @@
                 </table>
             </div>
 
-        </div>
+        <!-- </div>
     </div>
-</section>
+</section> -->
