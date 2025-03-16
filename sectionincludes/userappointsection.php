@@ -2,12 +2,13 @@
     <div class="container">
         <div class="page-section">
             <h2 class="page-section__title text-center">Appointment</h2>
-                <?php include 'sectionincludes/systemtitle.php'; ?>
-
+            <?php # include 'sectionincludes/systemtitle.php'; ?>
+            
             <hr>
-
+            
             <div class="row">
                 <div class="col-md-3">
+                    <p class="text-center" style="font-size: 22px;"><b>Book Appointment</b></p>
                     <form method="POST" class="search-form mb-4">
                         <!-- <label for="name">Car Name:</label> -->
                         <input type="text" name="car-name" placeholder="Car Name..." class="form-control" id="name" name="name" required>
@@ -46,14 +47,18 @@
                 <?php include './phpincludes/sendmessage.php'; ?>
 
                 <div class="col-md-9">
-                    <h2 style="text-align: center">Booking List</h2>
-                    <div class="booking-list card bg-success" id="bookingList">
+                    <div class="booking-list card" id="bookingList">
                         <?php
-                            include 'adminsectionincludes/usermessageselect.php';
+                            // include 'adminsectionincludes/usermessageselect.php';
+                            include 'sectionincludes/userportfoliosection.php'; 
                         ?>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div>
+            <?php include 'adminsectionincludes/usermessageview.php'; ?>
         </div>
     </div>
 </section>
