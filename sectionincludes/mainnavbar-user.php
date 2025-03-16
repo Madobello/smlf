@@ -73,12 +73,11 @@ if(!isset($_SESSION['garageid']))
 
 
 
-
+ 
 
 <li cclass="dropdown">
 <?php
-if(isset($_SESSION['customerid']))
-{
+if(isset($_SESSION['customerid'])) {
 $customerid=$_SESSION['customerid'];
 $firstname=$_SESSION['firstname'];
 $lastname=$_SESSION['lastname'];
@@ -88,11 +87,7 @@ $phone=$_SESSION['phone'];
 <a href="#"  class="nav-link dropdown-toggle capitalize"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 <?php echo nl2br($lastname); ?><span class="caret"></span>
 </a>
-<?php
-}
-else
-{
-?>
+<?php } else { ?>
 <a href="#"  class="nav-link dropdown-toggle"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 ACCOUNT<span class="caret"></span>
 </a>
