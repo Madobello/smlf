@@ -22,8 +22,7 @@
     // }
     $resultgarage = $conn->query($sqlgarage);
     if ($resultgarage->num_rows > 0) {
-    while ($rowgarage = $resultgarage->fetch_assoc())
-{
+    while ($rowgarage = $resultgarage->fetch_assoc()) {
 ?>
 <div class="col-md-4 mb-4">
     <div class="card">
@@ -44,9 +43,12 @@
             <?php
                 if (isset($_SESSION['customerid'])) {
             ?>
-            <a href="./moreaboutgaragepage.php?garageid=<?php echo $rowgarage['id']; ?>" class="btn btn-primary">View More Info</a>
+            <!-- <a href="./moreaboutgaragepage.php?garageid=<?php # echo $rowgarage['id']; ?>" class="btn btn-primary">View More Info</a> -->
+
+            <a href="./userinfo.php?garageid=<?php echo $rowgarage['id']; ?>" class="btn btn-primary">Select</a>
+
             <?php } else { ?>
-            <a href="#" data-toggle="modal" data-target="#loginmodal" class="btn btn-primary">Login for More Info</a>
+            <a href="#" data-toggle="modal" data-target="#loginmodal" class="btn btn-primary">Select</a>
             <?php } ?>
         </div>
     </div>
@@ -65,7 +67,7 @@
     });
 </script>
 <?php } } else {
-        $sqlgarage = "SELECT * FROM garage LEFT JOIN car ON garage.name = car.garagename ORDER BY id ASC  LIMIT 3";
+        $sqlgarage = "SELECT * FROM `garage` LEFT JOIN `car` ON garage.name = car.garagename ORDER BY id ASC  LIMIT 3";
     // }
     $resultgarage = $conn->query($sqlgarage);
     if ($resultgarage->num_rows > 0) {
@@ -83,14 +85,14 @@
                 Phone: <?php echo ucfirst($rowgarage["phone"]); ?><br>
                 Email: <?php echo ucfirst($rowgarage["email"]); ?><br>
             </p>
-            <?php
-                if (isset($_SESSION['customerid'])) {
-            ?>
-            <a href="./moreaboutgaragepage.php?garageid=<?php echo $rowgarage['id']; ?>" class="btn btn-primary">View More Info</a>
-            <?php
-                } else {
-            ?>
-            <a href="#" data-toggle="modal" data-target="#loginmodal" class="btn btn-primary">Login for More Info</a>
+            <?php if (isset($_SESSION['customerid'])) { ?>
+
+            <!-- <a href="./moreaboutgaragepage.php?garageid=<?php # echo $rowgarage['id']; ?>" class="btn btn-primary">View More Info</a> -->
+
+            <a href="./userinfo.php?garageid=<?php echo $rowgarage['id']; ?>" class="btn btn-primary">Select</a>
+
+            <?php } else { ?>
+            <a href="#" data-toggle="modal" data-target="#loginmodal" class="btn btn-primary">Select</a>
             <?php
                 }
             ?>

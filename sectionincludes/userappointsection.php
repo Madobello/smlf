@@ -22,18 +22,20 @@
                         <input type="time" name="time" class="form-control" id="time" required>
                         <br>
 
-                        <select name="garage-name" id="" class="form-control">
-                            <option value="N/A" default>Which Garage</option>
-                            <?php 
-                                $sqlgarage = "SELECT * FROM `garage` ORDER BY id ASC";
+                        <?php 
+                            if (isset($_GET['garageid'])) {
+                                $garageid = $_GET['garageid'];
+                                $sqlgarage = "SELECT * FROM `garage` WHERE `id` = '$garageid'";
+                                $res_garage = $conn->query($sqlgarage);
+                                $row = mysqli_fetch_assoc($res_garage);
+                        ?>
+                        <input type="text" name="garage-name" value="<?php echo $row['name']; ?>" id="" class="form-control" readonly>
 
-                                $res_se_upage = $conn->query($sqlgarage);
-                                if ($res_se_upage->num_rows > 0) {
-                                    while ($row_se = $res_se_upage->fetch_assoc()) {
-                            ?>
-                            <option value="<?php echo $row_se['name']; ?>"><?php echo $row_se['name']; ?></option>
-                            <?php } } ?>
-                        </select><br>
+                        <?php } else { ?>
+                        
+                        <input type="text" placeholder="Filter and Select Garage" value="" id="" class="form-control" required>
+                        
+                        <?php } ?><br>
 
                         <textarea id="servicedesc" placeholder="Description" name="servicedesc" class="form-control" required rows="5"></textarea><br>
 
@@ -50,7 +52,7 @@
                     <div class="booking-list card" id="bookingList">
                         <?php
                             // include 'adminsectionincludes/usermessageselect.php';
-                            include 'sectionincludes/userportfoliosection.php'; 
+                            include 'sectionincludes/userportfoliosection.php';  
                         ?>
                     </div>
                 </div>
