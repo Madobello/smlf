@@ -33,7 +33,7 @@
 
                         <?php } else { ?>
                         
-                        <input type="text" placeholder="Filter and Select Garage" value="" id="" class="form-control" readonly>
+                        <input type="text" placeholder="Filter and Select Garage" value="" id="" class="form-control" required>
                         
                         <?php } ?><br>
 
