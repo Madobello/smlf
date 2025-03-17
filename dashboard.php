@@ -21,7 +21,7 @@ include 'adminsectionincludes/adminnavbar.php';
 ?> 
 
 <?php
-include 'adminsectionincludes/adminmain.php';
+include 'adminsectionincludes/adminmain.php'; 
 ?>
 <?php
 include 'adminsectionincludes/footersection.php';
