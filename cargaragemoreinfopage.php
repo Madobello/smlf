@@ -12,7 +12,7 @@
     <body>
         <div id="content-wrapper">
             <?php
-                include 'adminsectionincludes/adminnavbar.php';
+                include 'adminsectionincludes/garage/garagenavbar.php';
                 include 'adminsectionincludes/carmoreinfo.php';
             ?>
         </div>
