@@ -17,9 +17,6 @@
             </header>
             
             <?php
-                // include 'sectionincludes/useringo_section.php';
-                // include 'sectionincludes/aboutussection.php';
-                // include 'sectionincludes/overviewsection.php';
                 
                 include 'sectionincludes/userappointsection.php';
                 

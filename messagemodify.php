@@ -12,6 +12,18 @@ if ($_GET['serviceid']) {
     }
 }
 
+if ($_GET['servicerejid']) {
+    $service_id = $_GET['servicerejid'];
+
+    $update_query = $conn -> query("UPDATE `message` SET `appointment` = 'Rejected' WHERE `id` = '$service_id'");
+
+    if ($update_query) {
+        echo "<script>alert('Service Approved Successully!')</script>";
+        header("Location: messagepage.php");
+    }
+}
+
+
 if ($_GET['deleteid']) {
     $service_id = $_GET['deleteid'];
 
