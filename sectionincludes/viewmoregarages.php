@@ -117,7 +117,6 @@
         $service_id = $_GET['serviceid'];
         $msg_id = $_GET['msg'];
         $go = 1;
-
 ?>
 
 <script>
@@ -133,6 +132,32 @@
         },},}).then(function (isConfirm) {
         if (isConfirm) {
             window.location = 'payservicepage.php?serviceid=<?php echo $service_id; ?>&msg=<?php echo $msg_id; ?>&go=<?php echo $go?>';
+        }
+    });
+</script>
+
+<?php } ?>
+
+<?php 
+    if (isset($_POST['cancel'])) {
+        $service_id = $_GET['serviceid'];
+        $msg_id = $_GET['msg'];
+        $go = 1;
+?>
+
+<script>
+    swal({
+    title: "Do you want to cancel payment?",
+    text: "Press OK to continue or Cancel.",
+    icon: 'info',
+    buttons: {
+    cancel: "Cancel",
+    confirm: {
+    text: "OK",
+    closeModal: false,
+        },},}).then(function (isConfirm) {
+        if (isConfirm) {
+            window.location = 'userinfo.php';
         }
     });
 </script>
