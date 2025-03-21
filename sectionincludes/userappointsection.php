@@ -6,6 +6,8 @@
             
             <hr>
             
+            <!-- Booking Appointment Form -->
+
             <div class="row">
                 <div class="col-md-3">
                     <p class="text-center" style="font-size: 22px;"><b>Book Appointment</b></p>
@@ -58,6 +60,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Book List on User Dashboard -->
 
         <div>
             <?php include 'adminsectionincludes/usermessageview.php'; ?>

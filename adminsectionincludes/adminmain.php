@@ -11,7 +11,7 @@
             <div class="row gutters-40">
             <?php
             $count=1;
-            $sqlgarage = "SELECT * FROM garage ORDER BY id ASC ";
+            $sqlgarage = "SELECT * FROM `garage` ORDER BY `id` ASC ";
             if(!isset($_SESSION['garagename'])) {
                 $sqlgarage = "SELECT * FROM garage ORDER BY id ASC";
             } else {
